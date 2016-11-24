@@ -5,7 +5,7 @@ This is *FROM scratch* using https://partner-images.canonical.com/core/xenial/cu
 ```
 docker run -t -i -v $HOME/images:/images -p 8080:8080 -p 10022:10022 snoe/qemu
 ```
-## How it works, thanks qemu, novnc and websockigfy
+## How it works, thanks qemu, novnc and websockify
 
 ```
 # Run these two programs in parallel to get VNC console on 8080
