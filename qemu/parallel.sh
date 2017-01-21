@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # From http://stackoverflow.com/questions/10909685/run-parallel-multiple-commands-at-once-in-the-same-terminal
 # Alessandro Pezzato
@@ -6,7 +6,7 @@
 for cmd in "$@"; do {
   echo "Process \"$cmd\" started";
   $cmd & pid=$!
-  PID_LIST+=" $pid";
+  PID_LIST="$PID_LIST $pid";
 } done
 
 trap "kill $PID_LIST" SIGINT
