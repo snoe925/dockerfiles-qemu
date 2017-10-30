@@ -1,7 +1,5 @@
 Docker configuration to run FreeBSD in qemu in Docker.  Provides novnc for web base console on http://localhost:8080/vnc.html
 
-This is *FROM scratch* using https://partner-images.canonical.com/core/xenial/current/ubuntu-xenial-core-cloudimg-amd64-root.tar.gz. You will need to download that into the directory containing the Dockerfile.
-
 ```
 docker build -t SNoe925/qemu .
 docker run -t -i -v $HOME/images:/images -p 8080:8080 -p 10022:10022 SNoe925/qemu
